@@ -1,5 +1,5 @@
 <p align="center">
-<img src="images/nlp-with-python.ong" width="450px">
+<img src="images/nlp-with-python.png" width="600px">
 </p>
 
 #### 1. はじめに  
