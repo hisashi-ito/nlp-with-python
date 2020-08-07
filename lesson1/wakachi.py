@@ -12,7 +12,7 @@ import MeCab
 # python3.5 から導入された型宣言を利用
 # しかしあまり使っている人は見たことない。(これまでOSSで１回だけ見た)
 from typing import List  
-from pathlib import Path
+# from pathlib import Path
 
 class Main:
     
