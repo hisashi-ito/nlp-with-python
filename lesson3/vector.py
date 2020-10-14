@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 # コーパス情報を作成
 corpus = {}
@@ -35,6 +36,12 @@ vectorizer = TfidfVectorizer(token_pattern='(?u)\\b\\w+\\b')
 x = vectorizer.fit_transform(docs)
 
 # ラーメンのtfidfベクトルを取得
-ramen_vec = x[title2id["ラーメン"]].toarray()
+ramen_vec = x[title2id["ラーメン"]]#.toarray()
 
-print(ramen_vec)
+sim = cosine_similarity(ramen_vec, ramen_vec)
+print(sim)
+print(type(sim))
+print(sim.shape)
+
+#print(type(ramen_vec))
+#print(ramen_vec.shape)
